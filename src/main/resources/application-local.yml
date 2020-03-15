@@ -1,0 +1,10 @@
+# DataSource Config
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/sys_menagement?useUnicode=true&characterEncoding=utf-8&useSSL=false&?useServerPrepStmts=false&rewriteBatchedStatements=true
+    username: root
+    password: mysqlpwd
+  flyway:
+    baselineOnMigrate: true
+    locations: classpath:db/

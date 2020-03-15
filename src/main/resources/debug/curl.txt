@@ -1,0 +1,9 @@
+统计分数
+curl -X POST "localhost:8001/check/paper/score?role=teacher" -H "Content-Type:application/json" -d '{"paperId":1,"studentNumber":"10001"}'
+
+班级成绩排名
+curl -X GET "localhost:8001/result/paper/sort?role=teacher&paperId=1&classId=1" -H "Content-Type:application/json"
+
+年级成绩排名
+curl -X GET "localhost:8001/result/paper/sort?role=teacher&paperId=1&gradeId=1" -H "Content-Type:application/json"
+

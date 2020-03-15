@@ -1,0 +1,23 @@
+host = 127.0.0.1
+port = 6379
+timeout = 2000
+connectionTimeout = 2000
+soTimeout = 2000
+database = 6
+clientName = Focus
+ssl = false
+BlockWhenExhausted = true
+evictionPolicyClassName = org.apache.commons.pool2.impl.DefaultEvictionPolicy
+jmxEnabled = true
+lifo = true
+maxIdle = 64
+minIdle = 8
+maxTotal = 1024
+maxWaitMillis = 10000
+minEvictableIdleTimeMillis = 1800000
+numTestsPerEvictionRun = 3
+SoftMinEvictableIdleTimeMillis = 1800000
+testOnBorrow = false
+testWhileIdle = false
+timeBetweenEvictionRunsMillis = -1
+

@@ -1,0 +1,51 @@
+# DataSource Config
+spring:
+  profiles:
+    active: test
+  # 配置非 controller 类异常直接抛出
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: false
+  # 配置返回数据中日期格式
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  datasource:
+    druid:
+      filters: stat
+      initial-size: 3
+      min-idle: 3
+      max-active: 30
+      max-wait: 30000
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 1 FROM DUAL
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 50
+      remove-abandoned: true
+      remove-abandoned-timeout: 30
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+  flyway:
+    baselineOnMigrate: true
+
+server:
+  port: 8001
+
+# Logger Config
+logging:
+  level:
+    com.exam: debug
+    com.exam.domain: debug
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.log4j.Log4jImpl
